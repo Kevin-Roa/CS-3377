@@ -1,5 +1,4 @@
 # **CS 3377**
-___
 ## Description
   > Assignments and examples made for the CS/SE 3377 course at UT Dallas.
 ___
