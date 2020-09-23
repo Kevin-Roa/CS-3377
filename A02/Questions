@@ -1,0 +1,43 @@
+2.
+	a. relative path (filename if milk_co is not a folder but actually just a file)
+	b. relative path
+	c. absolute path
+	d. absolute path
+	e. realtive path
+	f. filename
+
+3.
+	a. 
+		cd /home
+		cd ~
+		cd ../ (until you are in home directory)
+	b.
+		pwd
+
+4. 
+	a.
+		mkdir literature/classics 
+
+		rmdir literature/classics
+		or 
+		rm -r literature/classics
+	b.
+		cd literature
+		mkdir classics
+		
+		rmdir classics
+		or 
+		rm -r classics
+	c.
+		mkdir /home/max/literature/classics
+
+		rmdir /home/max/literature/classics
+		or 
+		rm -r /home/max/literature/classics
+
+5.
+	a. the ':' character
+	b. 7
+	c. many
+	d. 6
+	e. yes

@@ -1,0 +1,402 @@
+Script started on 2020-09-12 01:16:06-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="34"]
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.5 167648 11708 ?        Ss   00:46   0:02 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    00:46   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   00:46   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   00:46   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   00:46   0:00 [kworker/0:0H-kblockd]
+root           9  0.0  0.0      0     0 ?        I<   00:46   0:00 [mm_percpu_wq]
+root          10  0.0  0.0      0     0 ?        S    00:46   0:00 [ksoftirqd/0]
+root          11  0.0  0.0      0     0 ?        I    00:46   0:01 [rcu_sched]
+root          12  0.0  0.0      0     0 ?        S    00:46   0:00 [migration/0]
+root          13  0.0  0.0      0     0 ?        S    00:46   0:00 [idle_inject/0]
+root          14  0.0  0.0      0     0 ?        S    00:46   0:00 [cpuhp/0]
+root          15  0.0  0.0      0     0 ?        S    00:46   0:00 [kdevtmpfs]
+root          16  0.0  0.0      0     0 ?        I<   00:46   0:00 [netns]
+root          17  0.0  0.0      0     0 ?        S    00:46   0:00 [rcu_tasks_kthre]
+root          18  0.0  0.0      0     0 ?        S    00:46   0:00 [kauditd]
+root          19  0.0  0.0      0     0 ?        S    00:46   0:00 [khungtaskd]
+root          20  0.0  0.0      0     0 ?        S    00:46   0:00 [oom_reaper]
+root          21  0.0  0.0      0     0 ?        I<   00:46   0:00 [writeback]
+root          22  0.0  0.0      0     0 ?        S    00:46   0:00 [kcompactd0]
+root          23  0.0  0.0      0     0 ?        SN   00:46   0:00 [ksmd]
+root          24  0.0  0.0      0     0 ?        SN   00:46   0:00 [khugepaged]
+root         116  0.0  0.0      0     0 ?        I<   00:46   0:00 [kintegrityd]
+root         117  0.0  0.0      0     0 ?        I<   00:46   0:00 [kblockd]
+root         118  0.0  0.0      0     0 ?        I<   00:46   0:00 [blkcg_punt_bio]
+root         119  0.0  0.0      0     0 ?        I<   00:46   0:00 [tpm_dev_wq]
+root         120  0.0  0.0      0     0 ?        I<   00:46   0:00 [ata_sff]
+root         121  0.0  0.0      0     0 ?        I<   00:46   0:00 [md]
+root         122  0.0  0.0      0     0 ?        I<   00:46   0:00 [edac-poller]
+root         123  0.0  0.0      0     0 ?        I<   00:46   0:00 [devfreq_wq]
+root         124  0.0  0.0      0     0 ?        S    00:46   0:00 [watchdogd]
+root         127  0.0  0.0      0     0 ?        S    00:46   0:00 [kswapd0]
+root         128  0.0  0.0      0     0 ?        S    00:46   0:00 [ecryptfs-kthrea]
+root         131  0.0  0.0      0     0 ?        I<   00:46   0:00 [kthrotld]
+root         132  0.0  0.0      0     0 ?        I<   00:46   0:00 [acpi_thermal_pm]
+root         133  0.0  0.0      0     0 ?        S    00:46   0:00 [scsi_eh_0]
+root         134  0.0  0.0      0     0 ?        I<   00:46   0:00 [scsi_tmf_0]
+root         135  0.0  0.0      0     0 ?        S    00:46   0:00 [scsi_eh_1]
+root         136  0.0  0.0      0     0 ?        I<   00:46   0:00 [scsi_tmf_1]
+root         138  0.0  0.0      0     0 ?        I<   00:46   0:00 [vfio-irqfd-clea]
+root         140  0.0  0.0      0     0 ?        I<   00:46   0:00 [ipv6_addrconf]
+root         151  0.0  0.0      0     0 ?        I<   00:46   0:00 [kstrp]
+root         155  0.0  0.0      0     0 ?        I<   00:46   0:00 [kworker/u3:0]
+root         159  0.0  0.0      0     0 ?        I<   00:46   0:00 [kworker/0:1H-kblockd]
+root         173  0.0  0.0      0     0 ?        I<   00:46   0:00 [charger_manager]
+root         213  0.0  0.0      0     0 ?        S    00:46   0:00 [scsi_eh_2]
+root         216  0.0  0.0      0     0 ?        I<   00:46   0:00 [scsi_tmf_2]
+root         238  0.0  0.0      0     0 ?        S    00:46   0:00 [jbd2/sda5-8]
+root         239  0.0  0.0      0     0 ?        I<   00:46   0:00 [ext4-rsv-conver]
+root         278  0.0  1.0  51908 22352 ?        S<s  00:46   0:01 /lib/systemd/systemd-journald
+root         303  0.0  0.0      0     0 ?        S    00:46   0:00 [irq/18-vmwgfx]
+root         304  0.0  0.3  23468  7136 ?        Ss   00:46   0:01 /lib/systemd/systemd-udevd
+root         305  0.0  0.0      0     0 ?        I<   00:46   0:00 [ttm_swap]
+root         313  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop0]
+root         315  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop1]
+root         317  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop2]
+root         320  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop3]
+root         321  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop4]
+root         322  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop5]
+root         331  0.0  0.0      0     0 ?        S<   00:46   0:00 [loop6]
+root         366  0.0  0.0      0     0 ?        I<   00:46   0:00 [iprt-VBoxWQueue]
+root         382  0.0  0.0      0     0 ?        I<   00:46   0:00 [cryptd]
+systemd+     511  0.0  0.6  24044 12288 ?        Ss   00:47   0:00 /lib/systemd/systemd-resolved
+systemd+     514  0.0  0.3  90412  6336 ?        Ssl  00:47   0:00 /lib/systemd/systemd-timesyncd
+root         545  0.0  0.4 250516  9228 ?        Ssl  00:47   0:00 /usr/lib/accountsservice/accounts-daemon
+root         546  0.0  0.0   2540   852 ?        Ss   00:47   0:00 /usr/sbin/acpid
+avahi        552  0.0  0.1   8500  3452 ?        Ss   00:47   0:00 avahi-daemon: running [kevin-VirtualBox.local]
+root         554  0.0  0.1  18044  2804 ?        Ss   00:47   0:00 /usr/sbin/cron -f
+message+     556  0.0  0.2   8884  5972 ?        Ss   00:47   0:00 /usr/bin/dbus-daemon --system --address=systemd: -
+root         557  0.0  1.0 347052 21520 ?        Ssl  00:47   0:00 /usr/sbin/NetworkManager --no-daemon
+root         575  0.0  0.9  47892 20284 ?        Ss   00:47   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --ru
+root         579  0.0  0.5 238996 11480 ?        Ssl  00:47   0:00 /usr/lib/policykit-1/polkitd --no-debug
+syslog       584  0.0  0.2 224324  4588 ?        Ssl  00:47   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         589  0.2  1.5 635236 31316 ?        Ssl  00:47   0:03 /usr/lib/snapd/snapd
+root         590  0.0  0.3 244328  6528 ?        Ssl  00:47   0:00 /usr/libexec/switcheroo-control
+root         592  0.0  0.4  16932  8484 ?        Ss   00:47   0:00 /lib/systemd/systemd-logind
+root         597  0.0  0.7 395492 14332 ?        Ssl  00:47   0:00 /usr/lib/udisks2/udisksd
+root         602  0.0  0.2  13664  4924 ?        Ss   00:47   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        615  0.0  0.0   8320   324 ?        S    00:47   0:00 avahi-daemon: chroot helper
+root         644  0.0  0.4  37184  8768 ?        Ss   00:47   0:00 /usr/sbin/cupsd -l
+root         659  0.0  0.6 180424 12672 ?        Ssl  00:47   0:00 /usr/sbin/cups-browsed
+root         674  0.0  1.1 126428 22736 ?        Ssl  00:47   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/un
+root         680  0.0  0.5 313732 10656 ?        Ssl  00:47   0:00 /usr/sbin/ModemManager --filter-policy=strict
+whoopsie     718  0.0  0.7 327232 16140 ?        Ssl  00:47   0:00 /usr/bin/whoopsie -f
+kernoops     729  0.0  0.0  11240   444 ?        Ss   00:47   0:00 /usr/sbin/kerneloops --test
+kernoops     739  0.0  0.0  11240   452 ?        Ss   00:47   0:00 /usr/sbin/kerneloops
+root         923  0.0  0.1 304000  2780 ?        Sl   00:47   0:00 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-s
+root         939  0.0  0.4 248224  8660 ?        Ssl  00:47   0:00 /usr/sbin/gdm3
+root         944  0.0  0.4 175536  9288 ?        Sl   00:47   0:00 gdm-session-worker [pam/gdm-autologin]
+kevin        949  0.0  0.7  24548 15560 ?        Ss   00:47   0:00 /lib/systemd/systemd --user
+kevin        950  0.0  0.1 103376  3560 ?        S    00:47   0:00 (sd-pam)
+kevin        956  0.0  0.9 1416844 18724 ?       S<sl 00:47   0:01 /usr/bin/pulseaudio --daemonize=no --log-target=jo
+kevin        958  0.0  1.2 519980 24640 ?        SNsl 00:47   0:00 /usr/libexec/tracker-miner-fs
+kevin        961  0.0  0.3 248652  7016 ?        Sl   00:47   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+kevin        965  0.0  0.4  12192  9296 ?        Ss   00:47   0:01 /usr/bin/dbus-daemon --session --address=systemd: 
+kevin        969  0.0  0.3 248320  7672 ?        Ssl  00:47   0:00 /usr/libexec/gvfsd
+kevin        971  0.0  0.3 172628  6644 tty2     Ssl+ 00:47   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME
+kevin        976  0.0  0.4 382056  8556 ?        Sl   00:47   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o 
+kevin        981  1.3  2.8 270284 57128 tty2     Sl+  00:47   0:23 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/use
+kevin        986  0.0  0.5 326040 11504 ?        Ssl  00:47   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+rtkit        999  0.0  0.1 152916  2992 ?        SNsl 00:47   0:00 /usr/libexec/rtkit-daemon
+kevin       1005  0.0  0.2 244500  6008 ?        Ssl  00:47   0:00 /usr/libexec/gvfs-goa-volume-monitor
+kevin       1009  0.0  1.7 550804 36172 ?        Sl   00:47   0:00 /usr/libexec/goa-daemon
+kevin       1020  0.0  0.5 327300 11396 ?        Sl   00:47   0:00 /usr/libexec/goa-identity-service
+kevin       1023  0.0  0.4 325352  8956 ?        Ssl  00:47   0:00 /usr/libexec/gvfs-afc-volume-monitor
+kevin       1032  0.0  0.3 246596  7020 ?        Ssl  00:47   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+kevin       1036  0.0  0.3 244320  6224 ?        Ssl  00:47   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+root        1042  0.0  0.4 260748  9424 ?        Ssl  00:47   0:00 /usr/lib/upower/upowerd
+kevin       1047  0.0  0.7 199604 15568 tty2     Sl+  00:47   0:00 /usr/libexec/gnome-session-binary --systemd --syst
+kevin       1139  0.0  0.0  31200   364 ?        S    00:47   0:00 /usr/bin/VBoxClient --clipboard
+kevin       1140  0.0  0.1 163600  4024 ?        Sl   00:47   0:00 /usr/bin/VBoxClient --clipboard
+kevin       1150  0.0  0.0  31200   360 ?        S    00:47   0:00 /usr/bin/VBoxClient --seamless
+kevin       1151  0.0  0.1 163436  2712 ?        Sl   00:47   0:00 /usr/bin/VBoxClient --seamless
+kevin       1157  0.0  0.0  31200   360 ?        S    00:47   0:00 /usr/bin/VBoxClient --draganddrop
+kevin       1158  0.2  0.1 163952  2752 ?        Sl   00:47   0:04 /usr/bin/VBoxClient --draganddrop
+kevin       1165  0.0  0.0  31200   360 ?        S    00:47   0:00 /usr/bin/VBoxClient --vmsvga
+kevin       1166  0.0  0.1 165576  3332 ?        Sl   00:47   0:00 /usr/bin/VBoxClient --vmsvga
+kevin       1170  0.0  0.0   6032   456 ?        Ss   00:47   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SH
+kevin       1187  0.3  0.4 249812  9164 ?        Ssl  00:47   0:06 /usr/bin/ibus-daemon --daemonize --xim
+kevin       1192  0.0  0.4 248996  9196 ?        Sl   00:47   0:00 /usr/libexec/ibus-dconf
+kevin       1193  0.0  3.4 446232 70980 ?        Sl   00:47   0:01 /usr/libexec/ibus-ui-gtk3
+kevin       1195  0.2  2.9 405012 59716 ?        Sl   00:47   0:04 /usr/libexec/ibus-extension-gtk3
+kevin       1199  0.0  2.7 327364 56300 ?        Sl   00:47   0:00 /usr/libexec/ibus-x11 --kill-daemon
+kevin       1201  0.0  0.4 248980  9392 ?        Sl   00:47   0:00 /usr/libexec/ibus-portal
+kevin       1208  0.0  0.4 309796  8948 ?        Ssl  00:47   0:00 /usr/libexec/at-spi-bus-launcher
+kevin       1213  0.0  0.2   7216  4260 ?        S    00:47   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defa
+kevin       1218  0.0  0.5 618928 10508 ?        Ssl  00:47   0:00 /usr/libexec/xdg-desktop-portal
+kevin       1223  0.0  0.3 162760  6584 ?        Sl   00:47   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+kevin       1226  0.0  0.3 466048  6212 ?        Ssl  00:47   0:00 /usr/libexec/xdg-document-portal
+kevin       1230  0.0  0.2 244220  4636 ?        Ssl  00:47   0:00 /usr/libexec/xdg-permission-store
+kevin       1244  0.0  0.2  98672  4396 ?        Ssl  00:47   0:00 /usr/libexec/gnome-session-ctl --monitor
+kevin       1246  0.0  1.5 359128 32064 ?        Ssl  00:47   0:00 /usr/libexec/xdg-desktop-portal-gtk
+kevin       1251  0.0  0.8 421620 17632 ?        Ssl  00:47   0:00 /usr/libexec/gnome-session-binary --systemd-servic
+kevin       1260  0.0  0.2 156192  5572 ?        Sl   00:47   0:00 /usr/libexec/dconf-service
+kevin       1278  2.8 10.8 3585844 221364 ?      Ssl  00:47   0:49 /usr/bin/gnome-shell
+kevin       1301  0.1  0.4 175172  9100 ?        Sl   00:47   0:01 /usr/libexec/ibus-engine-simple
+kevin       1321  0.0  1.0 581588 21104 ?        Sl   00:47   0:00 /usr/libexec/gnome-shell-calendar-server
+kevin       1327  0.0  1.2 472780 25980 ?        Ssl  00:47   0:00 /usr/libexec/evolution-source-registry
+kevin       1338  0.0  1.4 716340 29864 ?        Ssl  00:47   0:00 /usr/libexec/evolution-calendar-factory
+kevin       1374  0.0  1.4 682060 29424 ?        Ssl  00:47   0:00 /usr/libexec/evolution-addressbook-factory
+kevin       1394  0.0  1.2 2607384 26324 ?       Sl   00:47   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shel
+kevin       1401  0.0  0.5 326304 10944 ?        Sl   00:47   0:00 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/g
+kevin       1416  0.0  0.4 322536  9044 ?        Ssl  00:47   0:00 /usr/libexec/gsd-a11y-settings
+kevin       1418  0.0  1.5 579052 31104 ?        Ssl  00:47   0:00 /usr/libexec/gsd-color
+kevin       1420  0.0  0.8 382968 17316 ?        Ssl  00:47   0:00 /usr/libexec/gsd-datetime
+kevin       1423  0.0  0.4 322776  9488 ?        Ssl  00:47   0:00 /usr/libexec/gsd-housekeeping
+kevin       1424  0.0  1.4 356896 30192 ?        Ssl  00:47   0:00 /usr/libexec/gsd-keyboard
+kevin       1429  0.0  1.6 699184 32732 ?        Ssl  00:47   0:00 /usr/libexec/gsd-media-keys
+kevin       1431  0.0  1.5 357492 31412 ?        Ssl  00:47   0:00 /usr/libexec/gsd-power
+kevin       1432  0.0  0.5 256716 11240 ?        Ssl  00:47   0:00 /usr/libexec/gsd-print-notifications
+kevin       1433  0.0  0.2 465720  5908 ?        Ssl  00:47   0:00 /usr/libexec/gsd-rfkill
+kevin       1434  0.0  0.2 244132  5760 ?        Ssl  00:47   0:00 /usr/libexec/gsd-screensaver-proxy
+kevin       1436  0.0  0.6 477524 12776 ?        Ssl  00:47   0:00 /usr/libexec/gsd-sharing
+kevin       1441  0.0  0.5 326696 10568 ?        Ssl  00:47   0:00 /usr/libexec/gsd-smartcard
+kevin       1447  0.0  0.5 330296 11004 ?        Ssl  00:47   0:00 /usr/libexec/gsd-sound
+kevin       1448  0.0  0.4 396500  9392 ?        Ssl  00:47   0:00 /usr/libexec/gsd-usb-protection
+kevin       1459  0.0  1.4 356440 29796 ?        Ssl  00:47   0:00 /usr/libexec/gsd-wacom
+kevin       1461  0.0  0.5 326860 10524 ?        Ssl  00:47   0:00 /usr/libexec/gsd-wwan
+kevin       1462  0.0  1.5 357528 31220 ?        Ssl  00:47   0:00 /usr/libexec/gsd-xsettings
+kevin       1475  0.0  0.2 231792  5652 ?        Sl   00:47   0:00 /usr/libexec/gsd-disk-utility-notify
+kevin       1490  0.0  2.9 790780 60864 ?        Sl   00:47   0:00 /usr/libexec/evolution-data-server/evolution-alarm
+kevin       1508  0.0  0.7 350800 14932 ?        Sl   00:47   0:00 /usr/libexec/gsd-printer
+colord      1554  0.0  0.7 257588 16264 ?        Ssl  00:47   0:00 /usr/libexec/colord
+kevin       1623  1.0  2.6 975284 52928 ?        Ssl  00:48   0:16 /usr/libexec/gnome-terminal-server
+kevin       1634  0.0  0.2  19372  5236 pts/0    Ss   00:48   0:00 bash
+kevin       1691  0.0  0.3 170944  6344 ?        Ssl  00:48   0:00 /usr/libexec/gvfsd-metadata
+kevin       1694  0.0  1.5 430312 30540 ?        Sl   00:48   0:00 update-notifier
+root        2024  0.0  0.0      0     0 ?        I    00:52   0:00 [kworker/u2:0-events_unbound]
+kevin       2238  0.0  0.2  19240  4828 pts/1    Ss   00:57   0:00 bash
+root        2352  0.0  0.0      0     0 ?        I    01:00   0:00 [kworker/0:2-ata_sff]
+root        2698  0.0  0.0      0     0 ?        I    01:05   0:00 [kworker/0:4-cgroup_destroy]
+root        2771  0.0  0.0      0     0 ?        I    01:06   0:00 [kworker/u2:2-events_unbound]
+root        2906  0.0  0.0      0     0 ?        I    01:11   0:00 [kworker/u2:1]
+root        2912  0.0  0.0      0     0 ?        I    01:11   0:00 [kworker/0:0-events]
+root        2913  0.0  0.0      0     0 ?        I    01:11   0:00 [kworker/0:1-events]
+kevin       3131  0.2  1.3 443464 27472 ?        Ssl  01:13   0:00 /usr/libexec/tracker-store
+kevin       3271  3.5  2.6 567568 53936 ?        Sl   01:15   0:00 /usr/bin/nautilus --gapplication-service
+kevin       3285  0.0  0.1  20468  3632 pts/1    S+   01:16   0:00 top
+kevin       3286  0.0  0.1  16836  2192 pts/0    S+   01:16   0:00 script
+kevin       3287  1.0  0.2  19240  4928 pts/2    Ss   01:16   0:00 bash -i
+kevin       3293  0.0  0.1  20108  3276 pts/2    R+   01:16   0:00 ps aux
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ kill 3285
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ cat fiel
+cat: fiel: No such file or directory
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ cat file 
+This is a test file.
+Hello, World!
+wow
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ ls /li[Kost+found/
+ls: cannot open directory '/lost+found/': Permission denied
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ apropos  [K-e compress
+bzexe (1)            - compress executable files in place
+gunzip (1)           - compress or expand files
+gzexe (1)            - compress executable files in place
+gzip (1)             - compress or expand files
+lz4 (1)              - lz4, unlz4, lz4cat - Compress or decompress .lz4 files
+lz4c (1)             - lz4, unlz4, lz4cat - Compress or decompress .lz4 files
+lz4cat (1)           - lz4, unlz4, lz4cat - Compress or decompress .lz4 files
+lzcat (1)            - Compress or decompress .xz and .lzma files
+lzma (1)             - Compress or decompress .xz and .lzma files
+mscompress (1)       - compress data using LZ77 algorithm
+msexpand (1)         - decompress data compressed using mscompress(1) or COMPRESS.EXE
+uncompress (1)       - compress or expand files
+unlz4 (1)            - lz4, unlz4, lz4cat - Compress or decompress .lz4 files
+unlzma (1)           - Compress or decompress .xz and .lzma files
+unxz (1)             - Compress or decompress .xz and .lzma files
+xz (1)               - Compress or decompress .xz and .lzma files
+xzcat (1)            - Compress or decompress .xz and .lzma files
+zcat (1)             - compress or expand files
+zip (1)              - package and compress (archive) files
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                               e.g., '--block-size=M'; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --hyperlink[=WHEN]     hyperlink file names; WHEN can be 'always'
+                               (default if omitted), 'auto', or 'never'
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage;
+                               used only with -s and per directory totals
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+                               (overrides QUOTING_STYLE environment variable)
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=TIME_STYLE  time/date format with -l; see TIME_STYLE below
+  -t                         sort by modification time, newest first
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1<newline>FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with 'posix-' takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation at: <https://www.gnu.org/software/coreutils/ls>
+or available locally via: info '(coreutils) ls invocation'
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ /bin.[K/echo --help
+Usage: /bin/echo [SHORT-OPTION]... [STRING]...
+  or:  /bin/echo LONG-OPTION
+Echo the STRING(s) to standard output.
+
+  -n             do not output the trailing newline
+  -e             enable interpretation of backslash escapes
+  -E             disable interpretation of backslash escapes (default)
+      --help     display this help and exit
+      --version  output version information and exit
+
+If -e is in effect, the following sequences are recognized:
+
+  \\      backslash
+  \a      alert (BEL)
+  \b      backspace
+  \c      produce no further output
+  \e      escape
+  \f      form feed
+  \n      new line
+  \r      carriage return
+  \t      horizontal tab
+  \v      vertical tab
+  \0NNN   byte with octal value NNN (1 to 3 digits)
+  \xHH    byte with hexadecimal value HH (1 to 2 digits)
+
+NOTE: your shell may have its own version of echo, which usually supersedes
+the version described here.  Please refer to your shell's documentation
+for details about the options it supports.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation at: <https://www.gnu.org/software/coreutils/echo>
+or available locally via: info '(coreutils) echo invocation'
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ echo Kevin | od
+0000000 062513 064566 005156
+0000006
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ echo Kevin > name
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ rm -rf name
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ cp file file.copy
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ mv file.copy file2
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ grep "Hello file" file
+[01;31m[KHello[m[K, World!
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ head -1 file
+This is a test file.
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ tail -1 file
+wow
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ sort file
+Hello, World!
+This is a test file.
+wow
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ diff file diffFile 
+3a4
+> different
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ file *
+diffFile:   ASCII text
+file:       ASCII text
+file2:      ASCII text
+Folder:     directory
+typescript: ASCII text, with CRLF, LF line terminators, with escape sequences, with overstriking
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ tar -cf fileArchive.tar ./file
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ gzip fileArchive.tar 
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ mv fileArchive.tar.gz ./Folder/
+]0;kevin@kevin-VirtualBox: ~/Desktop[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop[00m$ cd Folder/
+]0;kevin@kevin-VirtualBox: ~/Desktop/Folder[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop/Folder[00m$ tar -xzf fileArchive.tar.gz 
+]0;kevin@kevin-VirtualBox: ~/Desktop/Folder[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop/Folder[00m$ who 
+kevin    :0           2020-09-12 00:47 (:0)
+]0;kevin@kevin-VirtualBox: ~/Desktop/Folder[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop/Folder[00m$ date
+Sat 12 Sep 2020 01:18:09 AM EDT
+]0;kevin@kevin-VirtualBox: ~/Desktop/Folder[01;32mkevin@kevin-VirtualBox[00m:[01;34m~/Desktop/Folder[00m$ exit
+exit
+
+Script done on 2020-09-12 01:18:11-04:00 [COMMAND_EXIT_CODE="0"]
