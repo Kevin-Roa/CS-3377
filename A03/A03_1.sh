@@ -4,6 +4,7 @@
 #		Copy all files in the current directory to a new sub directory
 # 	Then delete the sub directory
 #		Then display a message to indicate task completion
+#		(This is a useless program)
 # Usage (In shell):
 #   1. ./A03_1.sh
 

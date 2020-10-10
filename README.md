@@ -5,6 +5,7 @@ ___
 ## What I Learned
   - Unix architecture
   - Shell commands/usage
+  - Creating shell scripts
   - C/C++ coding
 ___
 ## Academic Integrity Notice

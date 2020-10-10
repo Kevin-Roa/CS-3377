@@ -13,7 +13,7 @@
 printf "Enter a directory: "
 read dir
 
-# Remove extra / if input included it at end
+# Remove extra "/" if input included it at end
 dir=`echo "$dir" | sed 's/\/$//'`
 
 # Loop through files in directory
