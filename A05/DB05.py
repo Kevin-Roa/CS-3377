@@ -12,8 +12,17 @@
 import sys
 import getopt
 
-def main(argv):
+def usage():
+	print('------------------------------------ DB05.py ------------------------------------')
+	print('A program to print the character, word, and sentence count of a file.\n')
+	print('ARGUMENTS')
+	print('-i | --inputFile <inputFile> : Pass the file to be read instead of prompting you.')
+	print('-v | --verbose               : Print in a verbose manner.')
+	print('-h | --help                  : Show help page.')
+	print('---------------------------------------------------------------------------------')
+	exit()
 
+def main(argv):
 	# Parse command line options
 	try:
 		opts, args = getopt.getopt(argv,"hi:v",["help", "inputFile=", "verbose"])
@@ -63,16 +72,6 @@ def main(argv):
 	else:
 		# Print the word and sentence count
 		print('Sentences:  ', sentenceCount, '\nWords:      ', wordCount, '\nCharacters: ', charCount)
-
-def usage():
-	print('-------------------------------------- DB05.py --------------------------------------')
-	print('A program to print the character, word, and sentence count of a file.\n')
-	print('ARGUMENTS')
-	print('-i | --inputFile <inputFile> : Pass the file to be read as to not be prompted later.')
-	print('-v | --verbose               : Print in a verbose manner.')
-	print('-h | --help                  : Show help page.')
-	print('-------------------------------------------------------------------------------------')
-	exit()
 
 if __name__ == "__main__":
   main(sys.argv[1:])
