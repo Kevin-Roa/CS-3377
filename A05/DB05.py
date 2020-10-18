@@ -17,12 +17,12 @@ def main():
 	try:
 		# Open file
 		with open(fileName, 'r') as file:
-			# Loop through every line in file
-			for line in file:
-				# Split the line on every word and get the count
-				wordCount += len(line.split())
-				# Count every occurance of .?! in the line and sum them up
-				sentenceCount += sum([line.count(x) for x in ['.', '?', '!']])
+			# Read file
+			contents = file.read()
+			# Split file on every word and get the count
+			wordCount += len(contents.split())
+			# Count every occurance of .?! and sum them up
+			sentenceCount += sum([contents.count(x) for x in ['.', '?', '!']])
 	except FileNotFoundError as err:
 		# Print error on invalid file name and exit program
 		sys.exit(err)
