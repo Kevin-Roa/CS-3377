@@ -1,6 +1,7 @@
 # Kevin A. Roa
 # Edited 10/17/2020
 # A python script to read a file and print the # of words and sentences.
+#		Sentences will always end with a single .?!
 # Extra additions:
 #		File error handling
 #		Character count
