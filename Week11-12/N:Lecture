@@ -1,0 +1,161 @@
+Lecture Notes
+
+Process based OS
+	most of OS executes within user Process
+	2 categories of processes
+		system processes
+		user process
+
+Unix process creation
+	every process except 0 is created by fork()
+		allocates entry in process table and assigns unique pid
+	child gets copy of parent 
+		child and parent share same code following fork()
+		they ahve different data between eachother
+	fork() returns
+		pid of child to parent
+		0 to child
+	Exec()
+		optional after fork call
+		replace the process's memory space with a new program
+	wait()
+		parerent waits for completion of child process
+		child can pass data via exit()
+			picked up by parent with wait()
+		child is a zombie if parent does not wait() for it
+
+Unix sys processes	
+	boot loads kernel image
+	process 0
+		created at boot time 
+		becomes the "swapper" after forking process 1
+	process 1
+		init process
+		on user log in, creates a process for that user
+
+Unix sub processes
+	system calls
+		pid_t fork()
+			creates new process image 
+			almost exact copy of the one that invoked it
+		int execv(char*filename, char* argv[])
+		int execl(char*filename,char* arg0, char* arg1,… NULL)
+			replace current process image with one running the program
+	wait functions
+		pid_t waitpid(pid_t pid, int* status_ptr, int options)
+			waits for completion of a particular child process
+		pid_t wait(int* status_ptr)
+			waits for any child to terminate
+		pid_t getpid(void)
+			return process id
+		pid_t getppid(void)
+			retuns parent id
+
+Process creation
+	asign unique pid
+	allocate space for process image
+	initialize process control block
+	set up appropriate linkages
+
+	address space
+		child duplicate of parent
+		child has a program loaded into it
+
+processes and threads
+	process is an isntance of a running program
+	thread are a light weight process
+	in a shared memory program a single process may have multiple threads
+		thread created within process
+		concurrent thread execution
+			concurrent if their logical flow overlaps in time
+			else they are sequential
+	threads	
+		basic unit of cpu utilization
+			cpu is dispatched to execute threads
+			threads scheduled for cpu cycles
+			thread within same process share a code section, data section, and other resources
+		process performs many different activities at same time
+		process with single thread can only do 1 task at a time
+			multiple thread management required for concurrent execution
+	multithread benefits
+		responsive
+		resource sharing
+			easy to switch between threads than processes
+		Multiprocessor architectures
+			significant increase in performance
+	multithread challenges
+		dividing activitiesbalance
+		data splitting
+		data dependency
+		testing and debugging
+	multithreading
+		performaning multiple threads in parallel
+			fast switching between threads
+		fine grain multithreading	
+			switch threads after each cycles
+			interleave instruction execution
+			continuous execution even if 1 thread stalls
+		couarse grain multithreading
+			only switch on long stalls
+			simplifies hardware
+		simultaneous multithreading
+			in multiple issues dynamicall scheduled processor
+				schedule instructions from multiple threads
+				instructions from independent threads execute when function units available
+				within threads dependencies handled by scheduling and register renaming
+shared memory programming
+	Pthreads
+		POSIX standard
+		low level
+		protable
+		possibly slow
+		heavyweight
+		interface to OS utilities
+		sys calls to create and sync threads
+		support for parallelism and syncronization
+		no explicit support for communication (pass pointer to shared thread)
+	OpenMP
+		standard for low level programming
+	Java threads
+	TBB
+		thread building blocks
+		intel
+	CILK
+		C ilk
+		lightweight threads in C
+
+pthreads
+	pthread_create
+		pthread_create (tid, attr, start_routine, arg);
+		tid: new thread ID
+		attr: set thread attributes (null = default)
+		start_routing: C routine to execute once created
+		arg: single argument to pass to start_routine
+			can pass as pointer casted to void
+	pthread_join
+		pthread_join(pthread_t *thread, void **result);
+		wait for specified thread to finish, place result in result list
+		can be called once for each thread
+		call will wait for thread associated with it to complete
+		returns 0 on success, negative on fail
+		result is pointer to return value of function in thread	
+			can pass null if you dont care about return value
+	example
+		pthread_t thread0, thread1;
+		pthread_create(&thread0, NULL, PrintHello, (void *) 0);
+		pthread_create(&thread1, NULL, PrintHello, (void *) 1);
+		pthread_join(thread0, NULL);
+		pthread_join(thread1, NULL);
+		creates 2 threads, calls PrintHello function, passes 0 and 1, waits for completion of both
+	other functions	(60+)
+		pthread_yield();
+			inform schedler that thread is willing to yield
+		pthread_exit(void *value);
+			Exit thread and pass value to joining thread (if exists)
+			return value passed as pointer
+		pthread_t me; me = pthread_self();
+			Allows a pthread to obtain its own identifier pthread_t thread;
+		Synchronizing access to shared variables
+			pthread_mutex_init, pthread_mutex_[un]lock
+			pthread_cond_init, pthread_cond_[timed]wait
+		

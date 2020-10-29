@@ -1,0 +1,55 @@
+Fork Video notes
+
+way of taking a process and spawn child processes
+
+use getpid() to get current process id
+	include <sys/types.h>
+	include <unistd.h>
+	will be different for parent and children
+
+call fork()
+	#include <unistd.h>
+	spawns new process
+	creates duplicate of program and runs on parent and child
+
+logic for specific children
+	pid_t pid = fork();
+	if (pid < 0)
+		error
+	if (pid == 0)
+		run on child process
+	if (pid > 0)
+		run on parent process
+
+	instead of having (pid > 0) you can exit(0) in child and everything below will be for parent
+		pid_t pid = fork();
+		if (pid < 0)
+			error
+		if (pid == 0)
+			run on child process
+			exit(0)
+		run on parent
+
+wait()
+	include <sys/wait.h>
+	wait for child process to terminate
+	wait(NULL)
+		returns pid of child
+	wait(&status)
+		get value returned by child process
+		to get value use WEXITSTATUS(status)
+	
+every child process has its own set of variables
+	they are not chared between parent and child
+
+zombie process
+	when child process has returned value but parent has not done wait() for it
+	process gets labeled defunct
+	process finally gets terminated when wait() called in parent
+
+fork in loop
+	each fork can fork again creating 2^n new processes
+	can easily get out of control becuase it doubles every time
+	fork in infinite while loop
+		fork bomb
+		endless new processes until reaches process limit

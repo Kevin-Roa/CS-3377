@@ -4,9 +4,12 @@
 ___
 ## What I Learned
   - Unix architecture
+    - Fundamental basics of unix environment
   - Shell commands/usage
-  - Creating shell scripts
+    - Utilization of utlilities
+    - Creating shell scripts
   - C/C++ coding
+    - Parallel processing
   - Python coding
 ___
 ## Academic Integrity Notice

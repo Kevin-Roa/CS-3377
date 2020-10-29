@@ -1,0 +1,114 @@
+Process Control Notes
+
+Process Identifiers
+	every process has a unique non negative integer ID
+		as a process terminates, their id gets released and can be reused
+		system in place to delay reuse (so that there wont be mistakes with processes having the same ID)
+	special processes (unix)
+		ID 0
+			scheduler process (swapper)
+			no program corresponds to this process, it is partr of kernel
+				a system process
+		ID 1
+			init process
+			invoked at end of bootstrap procedure
+			responsible for bringing up unix system after kernel bootstrapped
+				brings system to certian state
+			usually read system dependent initialization files
+			never dies
+			normal user processes (not system) in kernel
+				no superuser privileges
+			becomes parent process of any orphaned child process
+		each unix implementation has is own set of kernel processes for OS services
+			mac has launchd instead of init
+				it is an expanded version of init
+			ID 2 is pagedaaemon
+				paging of virtual memory system
+	other Identifiers
+		pid
+			process Identifiers
+			getpid();
+		ppid
+			parent process id
+			getppid();
+		uid
+			real user id
+			getuid();
+		euid
+			effective user id
+			geteuid();
+		gid
+			real group id
+			getgid();
+		egid
+			effective group id
+			getegid();
+Fork
+	existing process can create new process with fork function
+		fork();
+		new process is called child
+		called once but returns twice
+			return value in child is 0
+			return value in parent is pid of child
+			return -1 if error
+	child and parent continue executing with instruction that follows fork
+		child is copy of parent
+		dont share portions of memory
+		a child can change variables and it doesnt affect parent copy
+		order of execution depends on scheduler, child or parent can execute first
+	uses
+		when process wants to duplicate itself so that parent and child can run different sections at same time
+			common on servers
+		when process wants to execute different program
+			common for shells
+	sources of failure
+		too many processes on system
+		total number of proceses exceeds system limit
+Vfork
+	vfork()
+		same return values as fork
+		different semantics as fork
+	create new process for purpose of executing new program
+		child runs in adress space of parent until it calls exec or exit
+			child now can change values of parent	
+		can lead to undefined results if child modifies any data
+		slightly faster becuase it uses copy-on-write
+		guarentees child runs before parent	
+			can lead to lockup if child depends on parent action
+Exit functions
+	terminate process
+		1. return in main function
+		2. call exit function
+		3. call _exit or _Exit
+			terminate process without running exit handlers or signal handlers
+			may not flush stdio streams
+		4. return from the start routin gof the last thread in process
+		5. call pthread_exit function from last thread in process
+	abnormal termination
+		1. call abort 
+			generates SIGABRT signal
+		2. recieval of certain signals
+			signal can be generated from process itself or other process
+		3. last thread responds to calcellation request
+			one thread requests another be canceled
+	parent terminates before child
+		all children become children of init (inheirited)
+	child terminates when parent needs info
+		kernel keeps small amount of info on every terminating process
+			pid, termination status, cpu time
+wait and waitpid functions
+	when child is terminated kernel notified parent via a SIGCHLD signal
+		parent can ignore or act upon this signal (ignore is default)
+	process that calls wait or waitpid can
+		block, if all children still running
+		return immediately with termination status of child (if child terminated or waiting for termation status)
+		return immediately with error (no child process)
+	returns
+		returns pid if status is OK
+		returns 0
+		return -1 on error
+	wait vs waitpid
+		wait can block caller until child terminates
+			waitpid can prevent it from blocking
+		waitpid doesnt wait for child that terminates first
+			also has options that can control which process to wait for
