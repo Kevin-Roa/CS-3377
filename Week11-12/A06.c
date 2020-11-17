@@ -27,10 +27,12 @@ void a() {
 	pid_t pid = fork();
 
 	// On error
-	if (pid < 0)
+	if (pid < 0) {
 		// Assignment says to use sys_err but that seems like it is specific to the book
 		// Used perror instead because it should do the same thing
 		perror("Fork Error");
+		exit(1);
+	}
 	// If child process
 	else if (pid == 0) {
 		puts("Hello, World!");
@@ -44,10 +46,12 @@ void b() {
 	pid_t pid = fork();
 
 	// On error
-	if (pid < 0)
+	if (pid < 0) {
 		// Assignment says to use sys_err but that seems like it is specific to the book
 		// Used perror instead because it should do the same thing
 		perror("Fork Error");
+		exit(1);
+	}
 	// If child process
 	else if (pid == 0)
 	{

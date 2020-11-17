@@ -1,3 +1,6 @@
+// Not written by me
+// Provided by professor Bhanu Kapoor
+
 #include <stdio.h>
 #include <pthread.h>
 #include <sys/types.h>
