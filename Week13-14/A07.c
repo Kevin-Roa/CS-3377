@@ -6,12 +6,11 @@
 //		Use pthreads
 // 		print hello world and thread id on n threads
 //	2
-// 		Run fibonacci sequence on 2 child processes
-//		1 child returns creates array of all values in sequence
-//		1 child gets sum of all values in sequence
+//		1 child creates array of all values in fib sequence with input length
+//		1 child gets sum of all positive values less than input
 //		Make parent wait for children
 // 		Print the ids of the new processes
-//		This is not very efficient 
+//		This is not very efficient
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -27,7 +26,7 @@ unsigned int sum, values[MAX_FIB];
 // Print hello world with tid
 void *helloWorld()
 {
-	printf("Hello, World! from thread id: %lu\n", (unsigned long) pthread_self());
+	printf("Hello, World! from thread id: %lu\n", (unsigned long)pthread_self());
 	pthread_exit(NULL);
 }
 
@@ -46,39 +45,37 @@ void a()
 	exit(1);
 }
 
-void* getFibSeq(void *size) {
-	printf("Thread %lu Starting.\n", (unsigned long) pthread_self());
-	// Calculate Fibonacci sequence
-	double n1 = 0, n2 = 1;
-	double temp; 
-	for (int i = 1; i <= (int) size; i++)
-	{
-		// Store value in values array
-		values[i-1] = n1;
+void *getFibSeq(void *size)
+{
+	printf("Thread %lu Starting.\n", (unsigned long)pthread_self());
 
-		temp = n1 + n2;
-		n1 = n2;
-		n2 = temp;
-	}
-	printf("Thread %lu Finished.\n", (unsigned long) pthread_self());
-	pthread_exit(NULL);
-}
-
-void* getFibSum(void *size) {
-	printf("Thread %lu Starting.\n", (unsigned long) pthread_self());
 	// Calculate Fibonacci sequence
 	double n1 = 0, n2 = 1;
 	double temp;
-	for (int i = 1; i <= (int) size; i++)
+	for (int i = 1; i <= (int)size; i++)
 	{
-		// Add value to sum
-		sum += n1;
+		// Store value in values array
+		values[i - 1] = n1;
 
 		temp = n1 + n2;
 		n1 = n2;
 		n2 = temp;
 	}
-	printf("Thread %lu Finished.\n", (unsigned long) pthread_self());
+	printf("Thread %lu Finished.\n", (unsigned long)pthread_self());
+	pthread_exit(NULL);
+}
+
+void *getNSum(void *size)
+{
+	printf("Thread %lu Starting.\n", (unsigned long)pthread_self());
+
+	// Calculate sum of first N ints in sequence of positive integers
+	for (int i = 1; i <= (int)size; i++)
+	{
+		// Add value to sum
+		sum += i;
+	}
+	printf("Thread %lu Finished.\n", (unsigned long)pthread_self());
 	pthread_exit(NULL);
 }
 
@@ -113,8 +110,8 @@ void b()
 	pthread_t pids[2];
 
 	// Create new threads, add pids to array
-	pthread_create(&pids[0], NULL, getFibSum, (void *) size);
-	pthread_create(&pids[1], NULL, getFibSeq, (void *) size);
+	pthread_create(&pids[0], NULL, getNSum, (void *)size);
+	pthread_create(&pids[1], NULL, getFibSeq, (void *)size);
 
 	// Wait for threads to finish
 	pthread_join(pids[0], NULL);
@@ -123,7 +120,8 @@ void b()
 	// Print data
 	printf("\nThe sum of the first %d numbers is: %d\n", size, sum);
 	printf("The first %d numbers in the fibonacci sequence are: ", size);
-	for (int i = 0; i < size; i++) {
+	for (int i = 0; i < size; i++)
+	{
 		if (i == size - 1)
 			printf("%d\n", values[i]);
 		else

@@ -23,18 +23,21 @@
 
 #define NUM_THREADS 4
 
-void a() {
+void a()
+{
 	pid_t pid = fork();
 
 	// On error
-	if (pid < 0) {
+	if (pid < 0)
+	{
 		// Assignment says to use sys_err but that seems like it is specific to the book
 		// Used perror instead because it should do the same thing
 		perror("Fork Error");
 		exit(1);
 	}
 	// If child process
-	else if (pid == 0) {
+	else if (pid == 0)
+	{
 		puts("Hello, World!");
 		exit(1);
 	}
@@ -42,11 +45,13 @@ void a() {
 	exit(1);
 }
 
-void b() {
+void b()
+{
 	pid_t pid = fork();
 
 	// On error
-	if (pid < 0) {
+	if (pid < 0)
+	{
 		// Assignment says to use sys_err but that seems like it is specific to the book
 		// Used perror instead because it should do the same thing
 		perror("Fork Error");
@@ -58,24 +63,26 @@ void b() {
 		int size = 0;
 		int valid;
 		// Repeatedly ask for user input until valid positive number
-		do {
+		do
+		{
 			puts("Enter the number of members in the sequence.");
 			scanf("%d", &size);
 
 			// Print on negative number
-			if (size <= 0) {
+			if (size <= 0)
+			{
 				puts("Enter a positive number.\n");
 				valid = 0;
 			}
 			else
 				valid = 1;
-		}
-		while (valid == 0);
+		} while (valid == 0);
 
 		// Calculate Fibonacci sequence
 		double n1 = 0, n2 = 1;
 		double temp;
-		for (int i = 1; i <= size; i++) {
+		for (int i = 1; i <= size; i++)
+		{
 			printf("%.0f, ", n1);
 			temp = n1 + n2;
 			n1 = n2;
@@ -92,12 +99,14 @@ void b() {
 }
 
 // Print hello world with tid
-void* helloWorld() {
-	printf("Hello, World! from thread id: %lu\n", (unsigned long) pthread_self());
+void *helloWorld()
+{
+	printf("Hello, World! from thread id: %lu\n", (unsigned long)pthread_self());
 	pthread_exit(NULL);
 }
 
-void c() {
+void c()
+{
 	// Array for holding the pids of new threads
 	pthread_t pids[NUM_THREADS];
 	// Loop NUM_THREADS times creating new threads
@@ -112,7 +121,8 @@ void c() {
 }
 
 // Choose which assignment to run
-void getAssignment() {
+void getAssignment()
+{
 	int assignment;
 	// Prompt for assignment number
 	printf("Enter the number for the assignment you want to run.\n(1, 2, 3)\n");
@@ -120,23 +130,25 @@ void getAssignment() {
 	puts("");
 
 	// Run specific assignment
-	switch(assignment) {
-		case 1:
-			a();
-			break;
-		case 2:
-			b();
-			break;
-		case 3:
-			c();
-			break;
-		default:
-			puts("Enter a valid assignment.");
-			getAssignment();
+	switch (assignment)
+	{
+	case 1:
+		a();
+		break;
+	case 2:
+		b();
+		break;
+	case 3:
+		c();
+		break;
+	default:
+		puts("Enter a valid assignment.");
+		getAssignment();
 	}
 }
 
-int main() {
+int main()
+{
 	getAssignment();
 	return 0;
 }

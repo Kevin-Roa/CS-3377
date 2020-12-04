@@ -13,7 +13,7 @@
 #			Added input validity checking
 #			Utilized functions to increase readability and code reuse
 # Usage (In shell):
-#   1. ./guessingGame.sh
+#   1. ./A04.sh
 
 #!/bin/bash
 
